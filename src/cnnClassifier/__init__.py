@@ -4,7 +4,12 @@ import logging
 
 logging_str = "[%(asctime)s: %(levelname)s: %(module)s: %(message)s]"
 
+
+project_root = os.path.abspath(os.path.dirname(__file__))
 log_dir = "logs"
+
+sys.path.append(os.path.join(project_root, log_dir))
+
 log_filepath = os.path.join(log_dir,"running_logs.log")
 os.makedirs(log_dir, exist_ok=True)
 

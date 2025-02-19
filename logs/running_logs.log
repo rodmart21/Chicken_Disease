@@ -1,0 +1,71 @@
+[2025-02-18 12:14:17,569: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-18 12:14:17,601: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-18 12:14:17,621: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-18 12:14:17,623: INFO: common: created directory at: artifacts]
+[2025-02-18 12:14:17,624: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-18 12:14:20,224: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 9F7A:E61E9:319E70B:33C5740:67B46B8A
+Accept-Ranges: bytes
+Date: Tue, 18 Feb 2025 11:14:18 GMT
+Via: 1.1 varnish
+X-Served-By: cache-fra-eddf8230058-FRA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1739877258.287928,VS0,VE517
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 48d6f487a8e75655da161273df026a6e6a7091ea
+Expires: Tue, 18 Feb 2025 11:19:18 GMT
+Source-Age: 0
+
+]
+[2025-02-18 12:14:21,985: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-02-18 12:14:21,986: INFO: main: *******************]
+[2025-02-18 12:14:21,986: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-02-18 12:14:21,989: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-18 12:14:21,992: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-18 12:14:21,992: INFO: common: created directory at: artifacts]
+[2025-02-18 12:14:21,993: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-02-18 12:14:31,441: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-02-18 12:14:31,559: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-02-18 12:14:31,621: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-02-18 12:14:31,621: INFO: main: *******************]
+[2025-02-18 12:14:31,621: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-02-18 12:14:31,621: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-18 12:14:31,631: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-18 12:14:31,631: INFO: common: created directory at: artifacts]
+[2025-02-18 12:14:31,633: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2025-02-18 12:14:31,633: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-02-18 12:14:31,635: INFO: common: created directory at: artifacts\training]
+[2025-02-18 12:14:31,770: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-02-18 12:14:34,517: ERROR: main: {{function_node __wrapped__CreateSummaryFileWriter_device_/job:localhost/replica:0/task:0/device:CPU:0}} artifacts\prepare_callbacks\tensorboard_log_dir is not a directory [Op:CreateSummaryFileWriter] name: ]
+Traceback (most recent call last):
+  File "c:\Users\RodrigoMartínezAlons\OneDrive - Sparrow Networks GmbH\Python\Classification-Projects-main\main.py", line 48, in <module>
+    model_trainer.main()
+  File "c:\Users\RodrigoMartínezAlons\OneDrive - Sparrow Networks GmbH\Python\Classification-Projects-main\src\cnnClassifier\pipeline\stage_03_training.py", line 26, in main
+    training.train(
+  File "C:\Users\RodrigoMartínezAlons\OneDrive - Sparrow Networks GmbH\Python\Classification-Projects-main\src\cnnClassifier\components\training.py", line 68, in train
+    self.model.fit(
+  File "C:\Users\RodrigoMartínezAlons\OneDrive - Sparrow Networks GmbH\Python\Classification-Projects-main\venv_image_class\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\RodrigoMartínezAlons\OneDrive - Sparrow Networks GmbH\Python\Classification-Projects-main\venv_image_class\Lib\site-packages\tensorflow\python\framework\ops.py", line 6002, in raise_from_not_ok_status
+    raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.FailedPreconditionError: {{function_node __wrapped__CreateSummaryFileWriter_device_/job:localhost/replica:0/task:0/device:CPU:0}} artifacts\prepare_callbacks\tensorboard_log_dir is not a directory [Op:CreateSummaryFileWriter] name: 
+[2025-02-18 12:15:51,709: INFO: main: Welcome to my custom log]
+[2025-02-18 12:17:16,180: INFO: main: Welcome to my custom log]

@@ -5,7 +5,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')  
 
 # Adding this for making sure we create it in the correct directory
-desired_directory = r"C:\Users\RodrigoMartínezAlons\OneDrive - Sparrow Networks GmbH\Python\Classification-Projects-main"
+desired_directory = r"cd "
 os.chdir(desired_directory)
 print("Current Working Directory:", os.getcwd()) 
 
