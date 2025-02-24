@@ -1,0 +1,49 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		}
+	],
+	"settings": {
+		"sqltools.connections": [
+			{
+				"previewLimit": 50,
+				"server": "scrapperdb-instance-1.c9sspr3fqhgw.eu-central-1.rds.amazonaws.com",
+				"port": 5432,
+				"askForPassword": true,
+				"driver": "PostgreSQL",
+				"name": "Bayer DB",
+				"database": "BAYER",
+				"username": "postgres"
+			},
+			{
+				"previewLimit": 50,
+				"server": "scrapperdb-instance-1.c9sspr3fqhgw.eu-central-1.rds.amazonaws.com",
+				"port": 5432,
+				"driver": "PostgreSQL",
+				"name": "mahle23",
+				"database": "mahle23",
+				"username": "postgres"
+			},
+			{
+				"previewLimit": 50,
+				"server": "scrapperdb-instance-1.c9sspr3fqhgw.eu-central-1.rds.amazonaws.com",
+				"port": 5432,
+				"driver": "PostgreSQL",
+				"name": "mahle",
+				"database": "mahle",
+				"username": "postgres"
+			},
+			{
+				"previewLimit": 50,
+				"server": "scrapperdb.cluster-c9sspr3fqhgw.eu-central-1.rds.amazonaws.com",
+				"port": 5432,
+				"askForPassword": true,
+				"driver": "PostgreSQL",
+				"name": "Brand_Domain",
+				"database": "data_service_debug",
+				"username": "postgres"
+			}
+		]
+	}
+}

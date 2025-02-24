@@ -18,8 +18,6 @@ class PrepareBaseModelTrainingPipeline:
 
 
 
-
-
 if __name__ == '__main__':
     try:
         logger.info(f"*******************")
